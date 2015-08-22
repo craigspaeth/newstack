@@ -3,8 +3,6 @@ import Layout from 'components/layout'
 import TweetBox from '../tweetbox'
 import Feed from '../feed'
 
-let { main } = React.DOM
-
 class Home extends React.Component {
 
   render() {
@@ -19,4 +17,4 @@ class Home extends React.Component {
   }
 }
 
-export default (props) => { return React.createElement(Home, props) }
+export default (props) => React.createElement(Home, props)

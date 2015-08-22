@@ -15,8 +15,6 @@ Experimenting with full stack React
 ## Guidelines
 
 * Only use arrow functions
-	* () => { return 'foo' } only
-	* always use parens, braces and return
 * Only use let
 * Only a single `export default`
 * Only imports at the top and export at the bottom of the file
@@ -36,3 +34,4 @@ Experimenting with full stack React
 
 * Hot reloading is def. more important as server-side templates are now components
 * Facebook really wants you to use JSX.. this createElement crap is so verbose
+* Can't really copy + paste code you play with in browser
