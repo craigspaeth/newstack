@@ -19,7 +19,6 @@ Experimenting with full stack React
 * Only a single `export default`
 * Only imports at the top and export at the bottom of the file
 * Don't use null, only undefined or falsey types
-* Don't use this—except for this.props and this.state :(
 * Don't use classes or prototypes—except for React components :(
 * Don't use for statements
 * Don't use promises

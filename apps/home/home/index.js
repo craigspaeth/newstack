@@ -11,7 +11,8 @@ class Home extends React.Component {
         content: [
           TweetBox(),
           Feed({ tweets: this.props.tweets })
-        ]
+        ],
+        assetPkg: '/home.js'
       })
     )
   }

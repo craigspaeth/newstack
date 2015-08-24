@@ -2,8 +2,10 @@ import React from 'react'
 import Radium from 'radium'
 import reset from './reset'
 import twitter from './twitter'
+import fs from 'fs'
+import path from 'path'
 
-let { div, html, body, head, style, header, nav, a, main } = React.DOM
+let { div, html, body, head, style, header, nav, a, main, script } = React.DOM
 
 class Layout extends React.Component {
   render () {
@@ -14,10 +16,13 @@ class Layout extends React.Component {
         body({},
           header({ style: styles.header },
             nav({},
-              div({ dangerouslySetInnerHTML: { __html: twitter } }),
+              div({
+                dangerouslySetInnerHTML: { __html: twitter },
+                style: styles.twitter }),
               a({ href: '/', style: styles.a }, 'Home'),
               a({ href: '/notifications', style: styles.a }, 'Notifications'))),
-          main({}, this.props.content)
+          main({}, this.props.content),
+          script({ src: this.props.assetPkg })
     )))
   }
 }
@@ -44,7 +49,13 @@ let styles = {
     letterSpacing: '1px',
     textDecoration: 'none',
     marginRight: '10px',
-    fontWeight: 'bold'
+    fontWeight: 'bold',
+    fontSize: '12px'
+  },
+  twitter: {
+    position: 'absolute',
+    left: 'calc(50% - 20px)',
+    top: '12px'
   }
 }
 

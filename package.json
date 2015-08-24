@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha",
-    "start": "nodemon --exec nf run babel-node index.js"
+    "start": "nf run node index.js",
+    "s": "nf run node-dev index.js"
   },
   "repository": {
     "type": "git",
@@ -20,16 +21,23 @@
   "dependencies": {
     "babel": "^5.8.21",
     "body-parser": "^1.13.3",
+    "browser-sync": "^2.8.2",
+    "browserify": "^11.0.1",
+    "browserify-dev-middleware": "^0.1.2",
+    "cache-require-paths": "^0.1.2",
     "express": "^4.13.3",
     "foreman": "^1.4.1",
+    "hotswap": "^1.1.0",
+    "jquery": "^2.1.4",
     "mongojs": "^1.2.1",
     "morgan": "^1.6.1",
-    "nodemon": "^1.4.0",
+    "node-dev": "^2.7.1",
     "radium": "^0.13.7",
     "react": "^0.13.3",
     "superagent": "^1.3.0"
   },
   "devDependencies": {
-    "babel-core": "^5.8.21"
+    "babel-core": "^5.8.21",
+    "babelify": "^6.2.0"
   }
 }
